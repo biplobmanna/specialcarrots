@@ -2,7 +2,7 @@
 
 well, its simple really: if you know, you know.
 
-if you done, oh well, move on; there's life to live, and baloons to pop.
+if you dont, oh well, move on; there's life to live, and baloons to pop.
 
 ## The Quintessential Question?
 
@@ -30,15 +30,19 @@ this website is hosted on my laptop on the floor of my room
 
 unfortunately, no
 
-my ip is behing a CGNAT, so port forwarding won't work (yes, i tried ddns and everything possible to get this running)
+my ip is behind a CGNAT, so port forwarding won't work (yes, i tried ddns and everything possible to get this running)
 
 so, the other option was to use a VPN, but i didn't want the visitors to connect to my VPN, plus i didn't wanna pay for any service - defeats the laptop on the floor, free hosting principle
 
+
 enter, ngrok, a tunneling app that gives me random urls that can hit my local server from the public internet
+
+
 
 the website is now reachable via [this link](https://bluegill-emerging-urchin.ngrok-free.app/)
 
 > note: this link will change in future, so don't depend too much on this. message me for the updated link
+
 
 ## What next?
 
