@@ -1,10 +1,17 @@
 version: '3.8'
 
+name: specialcarrots
 services:
-  django_gajar:
-    build: ./gajarmilega
-    command: python manage.py runserver 0.0.0.0:8000
+  django:
+    container_name: specialcarrots
+    restart: unless-stopped
+    build: 
+      context: ./gajarmilega
+      network: host
+    environment:
+      - DJANGO_HOME=/app
     volumes:
-      - ./gajarmilega:/usr/src/app
+      - ./gajarmilega:/app
     ports:
       - 8000:8000
+    network_mode: bridge
