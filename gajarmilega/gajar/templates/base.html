@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gajar Chahiye</title>
+    <link rel="icon" href={% static "img/carrot.svg" %} type="image/x-icon" />
+    <!-- Shantell Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% include "navbar.html" %}
+
+    <main>
+      {% block main %}
+      <!-- all main block content goes here-->
+      {% endblock main %}
+    </main>
+
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 20% 1fr 10%;
+        grid-template-areas:
+          ". header ."
+          ". main ."
+          ". footer .";
+        width: 100%;
+        min-height: 100vh;
+        max-width: 1536px;
+        font-family: "Shantell Sans", cursive;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
+        line-height: normal;
+        color: #f08234;
+      }
+
+      @media (width <= 1024px) {
+        body {
+          grid-template-columns: 1.5fr 7fr 1.5fr;
+        }
+      }
+
+      @media (width <= 628px) {
+        body {
+          grid-template-columns: 0fr 7fr 0fr;
+        }
+      }
+
+      main {
+        width: 100%;
+        height: 100%;
+        grid-area: main;
+      }
+    </style>
+
+    {% include "footer.html" %}
+  </body>
+</html>

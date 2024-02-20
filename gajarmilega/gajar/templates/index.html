@@ -1,52 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gajar Chahiye</title>
-	<!-- No stylesheets or favicon yet 
-		<link rel="stylesheet" href="./style.css">
-		<link rel="icon" href="./favicon.ico" type="image/x-icon">
-	-->
-  </head>
-  <body>
-		<header>
-		</header>
-		<main>
-			<h1> Chahiye kya gajar?</h1>
-			<p>-- served from local machine through ngrok tunnel</p>
-		</main>
-		<footer>
-		</footer>
+{% extends "base.html" %} {% load static %} {% block main %}
 
-	<style>
-		body {
-			display: grid;
-			grid-template-columns: 1fr 3fr 1fr;
-			grid-template-rows: 1fr 8fr 1fr;
-			grid-template-areas: 
-				"header header header"
-				". main ."
-				"footer footer footer";
-			width: 100%;
-			height: 100vh;
-		}
-		header {
-			width: 100%;
-			height: 100%;
-			grid-area: header;
-		}
-		main{
-			width: 100%;
-			height: 100%;
-			grid-area: main;
-		}
-		footer{
-			width: 100%;
-			height: 100%;
-			grid-area: footer;
-		}
-	</style>
-  </body>
-</html>
+<div class="container">
+  <div class="container__image">
+    <img src={% static "img/rabbit-pana.svg" %} />
+    <!-- attribute the source -->
+    <a href="https://storyset.com/animal" target="_blank">
+      @ Animal illustrations by Storyset
+    </a>
+  </div>
+
+  <div class="container__text1">
+    hello bunnies,
+    <br /><br />
+    are you bored of those plebian orange veggies that tarnish the name of the
+    mighty carrot?
+    <br />
+    do you want something special to add to your life?
+    <br />
+    are you unfulfilled in your quest for exotic delicacies?
+    <br />
+    <br />
+    or, are you on the lookout for something more?
+  </div>
+  <div class="container__text2">
+    <p>if so, you are at the right place</p>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=t41Ohe6OOqEtfABw">let's go get it!</a>
+  </div>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "t1 img"
+        "t2 t2";
+    }
+    .container__image {
+      grid-area: img;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-weight: 100;
+      font-size: 0.75rem;
+    }
+    .container__image > a {
+      color: grey;
+      text-decoration: inherit;
+      margin: -30px;
+      padding-right: 65px;
+    }
+    .container__text1 {
+      grid-area: t1;
+      font-size: 1.25rem;
+      padding: 1rem;
+    }
+    .container__text2 {
+      grid-area: t2;
+      font-size: 3rem;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: top;
+      place-items: center;
+    }
+    .container__text2 > a {
+        color: white;
+        font-size: 2rem;
+        text-decoration: inherit;
+        padding: 1.2rem 2rem;
+        background: #f19259;
+        border: solid #f19259;
+        border-radius: 9999px;
+    }
+    .container__text2 > a:hover {
+        background: #ff725e;
+        border: solid #ff725e;
+    }
+  </style>
+</div>
+
+{% endblock main %}
