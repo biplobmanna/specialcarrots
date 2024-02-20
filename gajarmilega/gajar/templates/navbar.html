@@ -1,0 +1,25 @@
+{% load static %}
+
+<header>
+  <img src={% static "img/carrot.svg" %} />
+  <p>Special Carrots</p>
+</header>
+
+<style>
+  header {
+    grid-area: header;
+    /* css to affect child components */
+    font-weight: 800;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+  }
+  header > img {
+    height: 35px;
+    width: 35px;
+  }
+  header > p {
+    margin-left: 1rem;
+  }
+</style>
