@@ -43,11 +43,8 @@ the website is now reachable via [this link](https://bluegill-emerging-urchin.ng
 
 > note: this link will change in future, so don't depend too much on this. message me for the updated link
 
-## adding github webhooks to jenkins
+## website index page layout
 
-- using zrok tunneling, trying to add webhooks and see if that shit works
-- 	
+![excalidraw layout for index page](./gajarmilega/static/docs/assets/index_page_wireframe.png)
 
-## What next?
-
-basically, make the website better, update the docs, and do some funky stuff
+done using excalidraw
