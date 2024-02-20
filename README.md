@@ -43,6 +43,10 @@ the website is now reachable via [this link](https://bluegill-emerging-urchin.ng
 
 > note: this link will change in future, so don't depend too much on this. message me for the updated link
 
+## adding github webhooks to jenkins
+
+- using zrok tunneling, trying to add webhooks and see if that shit works
+- 	
 
 ## What next?
 
